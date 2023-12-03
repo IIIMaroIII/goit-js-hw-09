@@ -1,32 +1,28 @@
 import images from './images.json';
+import simpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const refs = {
   gallery: document.querySelector('.gallery'),
-  basicLightbox: document.querySelector('.basicLightbox'),
   body: document.querySelector('body'),
 };
 
 refs.gallery.addEventListener('click', onModalOpen);
 
-function checkEscapeBtnPushedOnModalOpen(el) {
-  const ifBodyHasBasicLightbox =
-    refs.body.lastElementChild.classList.contains('basicLightbox');
-  if (ifBodyHasBasicLightbox) {
-    const basicLightboxRef = document.querySelector('.basicLightbox');
-    document.addEventListener('keydown', evt => {
-      if (evt.code === 'Escape') {
-        el.close();
-      }
-    });
-  }
-}
-
-function createBasicLightboxElement(e) {
-  const instance = basicLightbox.create(
-    `<img class="modal__img" src="${e.target.dataset.source}" alt="${e.target.alt}">`
-  );
-  instance.show();
-  return instance;
+function createSimpleLightBoxEl(e) {
+  let gallery = new simpleLightbox('.gallery a');
+  gallery.on('show.simplelightbox', function (e) {
+    `<div class="gallery">
+    <a href="">
+      <img
+        class="modal__img"
+        src="${e.target.dataset.source}"
+        alt="${e.target.alt}"
+        title="${e.target.alt}"
+      />
+    </a>
+  </div>`;
+  });
 }
 
 function onModalOpen(evt) {
@@ -34,8 +30,7 @@ function onModalOpen(evt) {
   if (evt.target.nodeName !== 'IMG') {
     return;
   }
-  const instanceRef = createBasicLightboxElement(evt);
-  checkEscapeBtnPushedOnModalOpen(instanceRef);
+  createSimpleLightBoxEl(evt);
 }
 
 function createGalleryItemMarkup(images) {
@@ -62,3 +57,14 @@ function renderMarkups(markup) {
 }
 
 createGalleryItemMarkup(images);
+
+// `  <div class="gallery">
+//   <a href="${e.target.dataset.source}">
+//     <img
+//       class="modal__img"
+//       src="${e.target.dataset.source}"
+//       alt="${e.target.alt}"
+//       title="${e.target.alt}"
+//     />
+//   </a>
+// </div>`;
