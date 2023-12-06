@@ -1,1 +1,15 @@
 @import url(../css/reset.css);
+.feedback-form {
+  max-width: 400px;
+}
+.feedback-email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.feedback-message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
