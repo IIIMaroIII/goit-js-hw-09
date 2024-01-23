@@ -1,7 +1,6 @@
 import '../css/feedback-form.css';
 
-// const formData = {};
-// const STORAGE_KEY = 'feedback-form-state';
+const STORAGE_KEY = 'feedback-form-state';
 
 // const refs = {
 //   form: document.querySelector('.feedback-form'),
