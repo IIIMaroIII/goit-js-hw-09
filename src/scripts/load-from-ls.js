@@ -1,4 +1,4 @@
-export function loadFromLS(key) {
+export function loadFromLS(key = 'empty') {
   const data = localStorage.getItem(key);
 
   try {
