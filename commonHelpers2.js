@@ -1,2 +1,2 @@
-import"./assets/modulepreload-polyfill-ec808ebb.js";const e={form:document.querySelector(".feedback-form")};e.form.addEventListener("submit",onFormSubmit);e.form.addEventListener("input",onFormInput);
+import"./assets/modulepreload-polyfill-ec808ebb.js";function r(t="empty",o=""){const e=JSON.stringify(o);localStorage.setItem(t,e)}function c(t){const o=localStorage.getItem(t);try{return JSON.parse(o)}catch{return o}}r();c();const n={form:document.querySelector(".feedback-form")};n.form.addEventListener("submit",a);n.form.addEventListener("input",s);function a(){}function s(t){console.log(t.currentTarget)}
 //# sourceMappingURL=commonHelpers2.js.map
