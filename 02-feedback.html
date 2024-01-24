@@ -7,29 +7,31 @@
     <title>Feedback form</title>
     <script type="module" crossorigin src="/goit-js-hw-09/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/modulepreload-polyfill-ec808ebb.js">
-    <link rel="stylesheet" href="/goit-js-hw-09/assets/02-feedback-eb1adf37.css">
+    <link rel="stylesheet" href="/goit-js-hw-09/assets/styles-8053c24e.css">
   </head>
   <body>
     <section>
-      <a href="./index.html">Go to home</a>
+      <a class="nav-link" href="./index.html">Go to home</a>
       <h1>Welcome to Feedback form</h1>
     </section>
     <form class="feedback-form" autocomplete="off">
-      <label class="feedback-email">
+      <label>
         Email
         <input
+          class="feedback-email input"
           type="email"
           name="email"
-          placeholder="Type your name"
           autofocus
+          placeholder="Please enter your name"
         />
       </label>
-      <label class="feedback-message">
+      <label>
         Message
         <textarea
+          class="feedback-message input"
           name="message"
           rows="8"
-          placeholder="Type your message "
+          placeholder="Please type your message"
         ></textarea>
       </label>
       <button type="submit">Submit</button>
