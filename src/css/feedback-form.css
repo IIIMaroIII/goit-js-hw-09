@@ -1,15 +1,61 @@
 @import url(../css/reset.css);
-.feedback-form {
-  max-width: 400px;
+
+label {
+  letter-spacing: 0.1em;
 }
 .feedback-email {
+}
+.input {
+  margin-top: 8px;
+  min-width: 360px;
+  min-height: 40px;
+
+  padding-left: 16px;
+
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 4px;
+
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
+.input:hover {
+  border-color: black;
+}
+
 .feedback-message {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
+  padding-top: 12px;
+  resize: none;
+}
+
+button {
+  font-family: Montserrat;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  padding-left: auto;
+  padding-right: auto;
+
+  min-width: 86px;
+  height: 40px;
+  border: 0px;
+  border-radius: 8px;
+  border-color: rgba(78, 117, 255, 1);
+  background-color: rgba(78, 117, 255, 1);
+  color: white;
+}
+
+button:hover {
+  background-color: rgba(108, 140, 255, 1);
+  border-color: rgba(108, 140, 255, 1);
+}
+
+::placeholder {
+  color: rgba(46, 47, 66, 1);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-align: left;
 }

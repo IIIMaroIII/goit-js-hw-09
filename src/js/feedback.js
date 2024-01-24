@@ -1,4 +1,4 @@
-import '../css/feedback-form.css';
+import '../css/styles.css';
 import { saveToLS } from '../scripts/save-to-ls';
 import { loadFromLS } from '../scripts/load-from-ls';
 
