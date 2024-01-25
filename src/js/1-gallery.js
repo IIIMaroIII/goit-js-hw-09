@@ -1,4 +1,4 @@
-import images from './images.json';
+import images from '../img/images.json';
 import SimpleLightbox from 'simplelightbox';
 import '../css/gallery.css';
 import 'simplelightbox/dist/simple-lightbox.min.css';
