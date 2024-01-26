@@ -20,10 +20,9 @@ function onFormSubmit(evt) {
     window.alert('Please fill out all input fields!');
   } else {
     console.log(loadFromLS(STORAGE_KEY));
+    localStorage.removeItem(STORAGE_KEY);
+    refs.form.reset();
   }
-
-  localStorage.removeItem(STORAGE_KEY);
-  refs.form.reset();
 }
 
 function onFormInput(evt) {
